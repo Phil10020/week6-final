@@ -1,1 +1,10 @@
-@import './layout/_index.scss';
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+
+@import './pages/index' ;
+@import './pages/layout';
+@import './helpers/utilities' ;
+@import './swiper' ;

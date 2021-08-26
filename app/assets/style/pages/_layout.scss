@@ -1,0 +1,18 @@
+@include media-breakpoint-up(lg) {
+    .position-lg-absolute {
+      position: absolute;
+    }
+    .translate-lg-middle {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+.banner {
+    background: url(https://i.imgur.com/kZS7NN7.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+}
+
+
+
+

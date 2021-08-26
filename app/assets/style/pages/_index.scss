@@ -1,0 +1,14 @@
+.banner-index {
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/max-van-den-oetelaar-IMYe9uYN27E-unsplash.jpg?raw=true);
+  height: 480px;
+  background-position: center center;
+  background-size: cover;
+  .banner-text {
+    margin-bottom: 80px;
+  }
+  @include media-breakpoint-up(sm) {
+    .banner-text {
+      margin-bottom: 0;
+    }
+  }
+}

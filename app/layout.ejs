@@ -6,55 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/style/bootstrap.css">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light border border-gray bg-white py-1" style="z-index:1090;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- 漢堡選單 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- logo -->
+        <a class="navbar-brand text-primary position-lg-absolute top-50 start-50 translate-lg-middle me-0" href="./index.html"><h1 class="fs-4 mb-0 text-center text-primary fw-normal">EXHIBINECTION</h1></a>
+        <!-- icon -->
+        <a href="#" class="nav-link position-relative link-black order-lg-3" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <span class="material-icons text-black ">
+            confirmation_number
+          </span>
+          <span class="pos-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-xs lh-1">
+            3
+          </span>
+        </a>
+        <!-- 折疊 -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0 w-100 d-flex justify-content-md-end">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="#">Sign in</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#">Sign up</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+  
         </div>
       </div>
     </nav>
 
     <%- contents %>
+    <!--swiper-->
+    
+    <div class="container">
+    <h2 class="mb-4 mt-5 font-weight-bold">猜你也喜歡...</h2>
+    <div class="row">
+      <div class="offset-md-1 col-12 col-md-11">
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://upload.cc/i1/2021/08/15/1iZTSX.jpg" class="recommendationPhoto" alt="No.22 線上設計展">
+                <h3 class="font-weight-bold fs-6 mt-1"><a href="#"  class="text-decoration-none text-dark"> No.22 線上設計展</a></h3>
+                <span>$350</span>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://upload.cc/i1/2021/08/12/XFWPsG.jpg" class="recommendationPhoto" alt="No.22 線上設計展">
+              <h3 class="font-weight-bold fs-6 mt-1"><a href="#"  class="text-decoration-none text-dark"> No.22 線上設計展</a></h3>
+              <span>$350</span>
+            </div>
+            <div class="swiper-slide" >
+              <img src="https://upload.cc/i1/2021/08/12/3ZOQea.jpg" class="recommendationPhoto" alt="No.22 線上設計展">
+              <h3 class="font-weight-bold fs-6 mt-1"><a href="#"  class="text-decoration-none text-dark" > No.22 線上設計展</a></h3>
+              <span>$350</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
-    <footer class="footer">
-      footer
+    <!--footer-->
+    <footer>
+      <div class="banner d-flex flex-column justify-content-end pb-32">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <h2 class="text-white fw-bolder mb-sm-3 mb-3">想收到展覽的最新消息嗎?<br>快訂閱我們吧</h2>
+              <div class="input-group mt-4">
+                <input type="text" class="form-control" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱" aria-describedby="button-add">
+                <div class="input-group-append">
+                  <button class="btn btn-danger" type="button" id="button-add">訂閱</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar py-md-6 py-4">
+         <div class="container d-sm-flex align-items-sm-start justify-content-betweem align-items-center">
+            <div class="d-md-flex  align-items-center d-sm-block ">
+                <h4 class="m-0 me-4">EXHIBINECTION</h4>
+                <span>© 2020. All Rights Reserved.</span>
+            </div>
+            <nav class="d-none d-md-block">
+              <ul class="d-flex list-unstyled m-md-0">
+                <li class="text-medium fs-6 ms-md-5">Sign in</li>
+                <li class="text-medium fs-6 ms-md-5">Sign up</li>
+              </ul>
+            </nav>
+         </div>
+      </nav>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
